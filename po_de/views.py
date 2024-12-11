@@ -9,7 +9,7 @@ def home(request):
    return render(request, 'home.html',{'postii':postii})
  
 def posts(request):
-   if request.method('POST'):
+   if request.method=='POST':
       postts=PostForm(request.POST)
       if postts.is_valid():
          postts.save()
@@ -17,4 +17,7 @@ def posts(request):
       
    else :
       postts=PostForm()
-   return render(request, 'post.html',{'postts':postts})
+   return render(request, 'postt.html',{'postts':postts})
+
+
+ 

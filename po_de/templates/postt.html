@@ -6,10 +6,8 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>post ur comment</h1>
-    <form method="post">
-      {% csrf_token%} {{forms.as_p}}
-      <button type="submit">Submit</button>
-    </form>
+    <h1>Add postse</h1>
+    <form method="post">{% csrf_token %} {{ postts.as_p }}</form>
+    <a href="/" class="back-link">Back to Home</a>
   </body>
 </html>
