@@ -6,14 +6,10 @@
     <title>Document</title>
   </head>
   <body>
-    <h1>Welcome post and delete section</h1>
-
-    {% for post in postii %}
-    <p>{{post.title}}</p>
-    <p>{{post.comment}}</p>
-    <p>{{post.author}}</p>
-    {% endfor %}
-
-    <a href="add">Add</a>
+    <h1>post ur comment</h1>
+    <form method="post">
+      {% csrf_token%} {{forms.as_p}}
+      <button type="submit">Submit</button>
+    </form>
   </body>
 </html>
